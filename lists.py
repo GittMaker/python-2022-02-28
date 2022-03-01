@@ -30,17 +30,23 @@ for number in numbers:
 print(count)
 
 # Összegzés tétele
-def sum(numbers):
+def sum(numbers:list):
     sum = 0
     for number in numbers:
         sum += number
     return sum
 
 # Szűrés
-def szures(numbers):
+def szures(numbers:list):
     negatives = []
     for number in numbers:
         if number < 0 and number not in negatives:
             negatives.append(number)
     return negatives
-    
+
+# Transzformáció
+def transform(numbers:list):
+    result = []
+    for number in numbers:
+        result.append(number * 2)
+    return result
