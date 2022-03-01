@@ -19,3 +19,10 @@ def test_list_elements(driver):
         tool_names.append(webelement.text)
 
     assert tool_names == ["Python", "Pip", "Webdriver", "Selenium"]
+
+def test_table_cells(driver:webdriver.Chrome):
+    elements = driver.find_elements(By.CLASS_NAME, "price")
+    prices = []
+    for element in elements:
+        prices.append(int(element.text))
+    assert prices == [100, 400, 150]

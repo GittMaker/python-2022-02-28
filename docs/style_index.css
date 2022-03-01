@@ -1,0 +1,9 @@
+
+
+tbody tr:nth-child(3){
+    /*font-weight: bold;*/
+}
+
+.price{
+    font-weight: bold;
+}
