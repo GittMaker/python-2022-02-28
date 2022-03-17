@@ -1,3 +1,4 @@
 *.json
 *.pyc
 venv
+report.html

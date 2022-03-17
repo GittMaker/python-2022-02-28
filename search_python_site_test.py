@@ -10,6 +10,7 @@ from selenium.webdriver.remote.webdriver import WebDriver
 @pytest.mark.fn_search
 @pytest.mark.basic
 def test_search_pep(driver: WebDriver, base_url):
+    """https://github.com/Training360/python-2022-03-10/blob/master/conftest.py"""
     driver.get(base_url)
     driver.find_element(By.ID, "id-search-field").send_keys("pep")
     driver.find_element(By.ID, "submit").click()
