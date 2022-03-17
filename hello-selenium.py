@@ -5,7 +5,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
-driver.get("https://gittmaker.github.io/python-2022-02-28/index.html")
+driver.get("http://127.0.0.1:5500/docs/index.html")
 
 header = driver.find_element(By.TAG_NAME, "h1").text
 print(header)
