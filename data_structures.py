@@ -19,3 +19,11 @@ paragraph = "alma korte barack meggy"
 fruits = paragraph.split()
 print(fruits)
 
+names =  ['Jack', 'Jane']
+names2 = ['John', 'Jane']
+print(names + names2)
+names.pop(0)
+print(names)
+
+del names2[1]
+print(names2)
