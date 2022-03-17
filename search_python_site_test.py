@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
+from selenium.webdriver.remote.webdriver import WebDriver
 
-def test_search_pep(driver):
+def test_search_pep(driver: WebDriver):
     driver.find_element(By.ID, "id-search-field").send_keys("pep")
     driver.find_element(By.ID, "submit").click()
     
@@ -8,7 +9,7 @@ def test_search_pep(driver):
     assert "pep" in first_link.lower()
 
 
-def test_about(driver):
+def test_about(driver: WebDriver):
     driver.find_element(By.LINK_TEXT, "About").click()
     title = driver.title
     assert 'about' in title.lower()
