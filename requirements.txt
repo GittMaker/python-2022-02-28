@@ -2,3 +2,4 @@ selenium
 webdriver_manager
 pytest
 pytest-base-url
+pytest-html

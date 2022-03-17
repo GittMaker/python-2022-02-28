@@ -19,6 +19,9 @@ def test_search_pep(driver: WebDriver, base_url):
 
 
 def test_about(driver: WebDriver, base_url):
+    """Description
+    pytest reports
+    Allure reports"""
     driver.get(urljoin(base_url, "/about/"))
     #driver.find_element(By.LINK_TEXT, "About").click()
     title = driver.title
