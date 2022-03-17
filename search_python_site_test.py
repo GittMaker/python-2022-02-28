@@ -1,7 +1,16 @@
+from urllib.parse import urljoin
+import pytest
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
 
-def test_search_pep(driver: WebDriver):
+#pytest.ini-ben definiáltuk a markereket
+#pytest -m "marker expression"
+#pl.: pytest -m "not slow"
+#pl.: pytest -m "slow and basic"
+@pytest.mark.fn_search
+@pytest.mark.basic
+def test_search_pep(driver: WebDriver, base_url):
+    driver.get(base_url)
     driver.find_element(By.ID, "id-search-field").send_keys("pep")
     driver.find_element(By.ID, "submit").click()
     
@@ -9,7 +18,8 @@ def test_search_pep(driver: WebDriver):
     assert "pep" in first_link.lower()
 
 
-def test_about(driver: WebDriver):
-    driver.find_element(By.LINK_TEXT, "About").click()
+def test_about(driver: WebDriver, base_url):
+    driver.get(urljoin(base_url, "/about/"))
+    #driver.find_element(By.LINK_TEXT, "About").click()
     title = driver.title
     assert 'about' in title.lower()
