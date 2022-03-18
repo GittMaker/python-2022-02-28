@@ -1,0 +1,15 @@
+GET http://localhost:8080/api/locations
+
+###
+
+POST http://localhost:8080/api/locations
+Content-Type: application/json
+
+{
+    "name": "Visual Studio Code",
+    "coords": "10,10"
+}
+
+###
+
+DELETE http://localhost:8080/api/locations
